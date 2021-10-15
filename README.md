@@ -1,2 +1,0 @@
-# Website
-https://stavzdev.me
