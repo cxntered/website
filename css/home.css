@@ -53,3 +53,7 @@ a.twitter:hover {
 a.youtube:hover {
   color: #ff0000 !important;
 }
+
+a.twitch:hover {
+  color: #643fa7 !important;
+}
