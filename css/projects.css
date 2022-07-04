@@ -1,117 +1,117 @@
 .projects {
-  max-width: 600px !important;
-  display: inline-block;
+	max-width: 600px !important;
+	display: inline-block;
 }
 
 .project {
-  margin-top: 10px;
-  margin: 20px;
-  max-width: 443px;
-  display: inline-flex;
-  justify-content: center;
+	margin-top: 10px;
+	margin: 20px;
+	max-width: 443px;
+	display: inline-flex;
+	justify-content: center;
 }
 
 .project-info {
-  color: var(--navbar-text-color);
-  text-align: left;
-  margin-left: 20px;
-  max-width: 360px;
+	color: var(--navbar-text-color);
+	text-align: left;
+	margin-left: 20px;
+	max-width: 360px;
 }
 
 .project-title {
-  font-size: 1.2rem;
+	font-size: 1.2rem;
 }
 
 .project-description {
-  font-size: .95rem;
+	font-size: .95rem;
 }
 
 .project-image {
-  display: flex !important;
-  height: 80px;
-  vertical-align: middle;
-  border: none;
-  border-radius: 50%;
+	display: flex !important;
+	height: 80px;
+	vertical-align: middle;
+	border: none;
+	border-radius: 50%;
 }
 
 .links {
-  padding-top: 20px;
-  display: inline;
+	padding-top: 20px;
+	display: inline;
 }
 
 .links a {
-  margin-right: 1.5rem;
-  margin-left: 0rem;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  color: var(--navbar-text-color);
-  border-radius: 20px;
-  background-color: var(--navbar-bg-color);
-  line-height: 2.5rem;
-  text-align: center;
-  box-shadow: 0px 1px 2px black
+	margin-right: 1.5rem;
+	margin-left: 0rem;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	color: var(--navbar-text-color);
+	border-radius: 20px;
+	background-color: var(--navbar-bg-color);
+	line-height: 2.5rem;
+	text-align: center;
+	box-shadow: 0px 1px 2px black
 }
 
 .links a:hover {
-  box-shadow: 0px 2px 3px black !important;
+	box-shadow: 0px 2px 3px black !important;
 }
 
 .link {
-  transition: .5s;
+	transition: .5s;
 }
 
 a.website:hover {
-  color: #1C70E7 !important;
+	color: #1C70E7 !important;
 }
 
 a.invite:hover {
-  color: #90a4ae !important;
+	color: #90a4ae !important;
 }
 
 a.discord:hover {
-  color: #5865F2 !important;
+	color: #5865F2 !important;
 }
 
 a.github:hover {
-  color: white !important;
+	color: white !important;
 }
 
 stat-container {
-  display: inline;
+	display: inline;
 }
 
 @media screen and (max-width: 768px) {
-  .projects {
-    max-width: 500px;
-  }
+	.projects {
+		max-width: 500px;
+	}
 
-  .project {
-    max-width: 400px;
-  }
+	.project {
+		max-width: 400px;
+	}
 
-  .project-info {
-    max-width: 300px;
-  }
+	.project-info {
+		max-width: 300px;
+	}
 
-  .project-image {
-    height: 70px;
-  }
+	.project-image {
+		height: 70px;
+	}
 
-  .project-title {
-    font-size: 1rem;
-  }
+	.project-title {
+		font-size: 1rem;
+	}
 
-  .project-description {
-    font-size: .9rem;
-  }
+	.project-description {
+		font-size: .9rem;
+	}
 }
 
 h3.margin-top {
-  color: var(--navbar-text-color);
-  margin-top: 30px;
+	color: var(--navbar-text-color);
+	margin-top: 30px;
 }
 
 h3 {
-  color: var(--navbar-text-color);
+	color: var(--navbar-text-color);
 }

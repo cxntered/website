@@ -1,59 +1,59 @@
 h1.title {
-  font-family: "Montserrat", sans-serif;
-  font-size: clamp(2rem, 3vw + 0.25rem, 3.25rem);
-  color: var(--navbar-text-color);
-  margin-top: 10px;
+	font-family: "Montserrat", sans-serif;
+	font-size: clamp(2rem, 3vw + 0.25rem, 3.25rem);
+	color: var(--navbar-text-color);
+	margin-top: 10px;
 }
 
 p.info {
-  color: var(--navbar-text-color);
-  margin: 20px;
+	color: var(--navbar-text-color);
+	margin: 20px;
 }
 
 
 .links {
-  padding-top: 20px;
-  display: inline;
+	padding-top: 20px;
+	display: inline;
 }
 
 .links a {
-  margin-right: 0.3rem;
-  margin-left: 0.3rem;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  color: var(--navbar-text-color);
-  border-radius: 20px;
-  background-color: var(--navbar-bg-color);
-  line-height: 2.5rem;
-  text-align: center;
-  box-shadow: 0px 1px 2px black
+	margin-right: 0.3rem;
+	margin-left: 0.3rem;
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	color: var(--navbar-text-color);
+	border-radius: 20px;
+	background-color: var(--navbar-bg-color);
+	line-height: 2.5rem;
+	text-align: center;
+	box-shadow: 0px 1px 2px black
 }
 
 .links a:hover {
-  box-shadow: 0px 2px 3px black !important;
+	box-shadow: 0px 2px 3px black !important;
 }
 
 .link {
-  transition: .5s;
+	transition: .5s;
 }
 
 a.github:hover {
-  color: white !important;
+	color: white !important;
 }
 
 a.discord:hover {
-  color: #5865F2 !important;
+	color: #5865F2 !important;
 }
 
 a.twitter:hover {
-  color: #1da1f2 !important;
+	color: #1da1f2 !important;
 }
 
 a.youtube:hover {
-  color: #ff0000 !important;
+	color: #ff0000 !important;
 }
 
 a.twitch:hover {
-  color: #643fa7 !important;
+	color: #643fa7 !important;
 }
