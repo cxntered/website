@@ -17,7 +17,7 @@
 	<meta content="cxntered" property="og:title" />
 	<meta content="cxntered's website" property="og:description" />
 	<meta content="https://cxntered.me" property="og:url" />
-	<meta content="https://cxntered.me/images/cxntered_misses_techno.png" property="og:image" />
+	<meta content="https://cxntered.me/images/cxntered_2.jpg" property="og:image" />
 	<meta content="#BDDAEF" data-react-helmet="true" name="theme-color" />
 	<title>cxntered</title>
 </head>
@@ -26,7 +26,7 @@
 	<header id="navbar">
 		<nav class="navbar-container container">
 			<a href="/" class="home-link">
-				<img class="navbar-logo" src="images/cxntered_misses_techno.png" alt="logo"></img>
+				<img class="navbar-logo" src="images/cxntered_2.jpg" alt="logo"></img>
 				cxntered
 			</a>
 			<button type="button" class="navbar-toggle" aria-label="Open navigation menu">
@@ -44,17 +44,11 @@
 		<script src="js/navbar.js"></script>
 	</header>
 	<h1 class="title">hey, i'm cxntered</h1>
-	<p class="info">i play games <br /> i also like to code sometimes</p>
+	<p class="info">i play games <br /> i am also a developer! :o</p>
 	<div class="links noselect">
-		<!-- <a onclick="function myFunction() { var popup = document.getElementById('myPopup'); popup.classList.toggle('show'); }"
-			class="link discord">
+		<a class="link discord popup" onclick="copyText()" onmouseleave="unhover()">
 			<span class="iconify" data-icon="akar-icons:discord-fill" data-inline="true"></span>
-			<span class="popuptext" id="myPopup">cxntered#8012</span>
-		</a> -->
-		<a class="link discord popup"
-			onclick="myFunction(); function myFunction() { var popup = document.getElementById('myPopup'); popup.classList.toggle('show'); }">
-			<span class="iconify" data-icon="akar-icons:discord-fill" data-inline="true"></span>
-			<span class="popuptext" id="myPopup">cxntered#8012</span>
+			<span class="popuptext" id="popup">cxntered#8012</span>
 		</a>
 		<a href="https://github.com/cxntered" class="link github">
 			<span class="iconify" data-icon="bx:bxl-github" data-inline="true"></span>
@@ -92,6 +86,8 @@
 		<p>Original website by <a class="credit" href="https://stavzdev.ninja">StavZDev</a></p>
 		<!-- <p>Original website by <a class="credit" href="https://cxntered.me">cxntered</a></p> -->
 	</footer>
+
+	<script src="js/popup.js"></script>
 </body>
 
 </html>

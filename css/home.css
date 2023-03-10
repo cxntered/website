@@ -71,7 +71,6 @@ a.twitter:hover {
 	display: inline-block;
 }
 
-/* The actual popup */
 .popup .popuptext {
 	visibility: hidden;
 	width: 140px;
@@ -86,7 +85,6 @@ a.twitter:hover {
 	margin-left: -80px;
 }
 
-/* Popup arrow */
 .popup .popuptext::after {
 	content: "";
 	position: absolute;
@@ -98,14 +96,12 @@ a.twitter:hover {
 	border-color: #555 transparent transparent transparent;
 }
 
-/* Toggle this class - hide and show the popup */
-.popup .show {
+.popup:hover .popuptext {
 	visibility: visible;
-	-webkit-animation: fadeIn 1s;
-	animation: fadeIn 1s;
+	-webkit-animation: fadeIn 0.75s;
+	animation: fadeIn 0.75s;
 }
 
-/* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
 	from {
 		opacity: 0;
