@@ -5,5 +5,6 @@
 	"singleQuote": false,
 	"jsxSingleQuote": false,
 	"trailingComma": "none",
+	"endOfLine": "crlf",
 	"printWidth": 100
 }

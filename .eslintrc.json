@@ -45,6 +45,10 @@
 			{ "avoidEscape": true, "allowTemplateLiterals": false }
 		],
 		"spaced-comment": "error",
-		"yoda": "error"
+		"yoda": "error",
+		"linebreak-style": [
+			"warn",
+			"windows"
+		]
 	}
 }
