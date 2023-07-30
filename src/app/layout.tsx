@@ -11,7 +11,20 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
 	title: "cxntered",
-	description: "cxntered's personal website"
+	description: "cxntered's personal website",
+	openGraph: {
+		title: "cxntered.me",
+		description: "cxntered's personal website",
+		url: "https://cxntered.me/",
+		siteName: "cxntered",
+		images: [
+			{
+				url: "https://cxntered.me/assets/cxntered.jpg"
+			}
+		],
+		locale: "en_US",
+		type: "website"
+	}
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
