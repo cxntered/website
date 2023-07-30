@@ -15,9 +15,7 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": [
-		"@typescript-eslint"
-	],
+	"plugins": ["@typescript-eslint"],
 	"rules": {
 		"no-unused-vars": "off",
 		"no-redeclare": "off",
@@ -39,16 +37,9 @@
 		"no-empty-function": "error",
 		"no-lonely-if": "error",
 		"prefer-const": "error",
-		"quotes": [
-			"error",
-			"double",
-			{ "avoidEscape": true, "allowTemplateLiterals": false }
-		],
+		"quotes": ["error", "double", { "avoidEscape": true, "allowTemplateLiterals": false }],
 		"spaced-comment": "error",
 		"yoda": "error",
-		"linebreak-style": [
-			"warn",
-			"windows"
-		]
+		"linebreak-style": ["warn", "windows"]
 	}
 }
