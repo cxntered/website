@@ -14,7 +14,9 @@ module.exports = {
 			current: "#252525",
 			hover: "#353535",
 			discord: "#5865f2",
-			twitter: "#1d9bf0"
+			twitter: "#1d9bf0",
+			globe: "#1c70e7",
+			robot: "#90a4ae",
 		}
 	},
 	plugins: []
