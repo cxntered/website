@@ -8,7 +8,7 @@ const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center text-center p-12">
+		<main className="flex min-h-screen flex-col items-center justify-center text-center px-12 py-20">
 			<div className="m-2">
 				<h1 className={`${montserrat.className} text-3xl md:text-5xl sm:text-4xl`}>
 					hey, i&apos;m cxntered! 👋
