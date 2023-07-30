@@ -69,7 +69,7 @@ const projects = [
 
 export default function Projects() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center text-center p-12">
+		<main className="flex min-h-screen flex-col items-center justify-center text-center px-12 py-20">
 			<div className="m-2">
 				<h2 className={`${montserrat.className} text-lg sm:text-xl font-bold mb-4`}>
 					Projects
@@ -85,7 +85,7 @@ export default function Projects() {
 						/>
 						<div className="text-left">
 							<h3 className="text-lg sm:text-xl font-bold">{project.name}</h3>
-							<p className="max-w-sm text-sm sm:text-base text-text">
+							<p className="max-w-sm text-sm sm:text-base text-gray">
 								{project.description}
 							</p>
 							<div className="flex">
