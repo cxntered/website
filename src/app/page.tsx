@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { Montserrat } from 'next/font/google';
-import { Icon } from '@iconify/react';
-import Link from 'next/link';
+import { Montserrat } from "next/font/google";
+import { Icon } from "@iconify/react";
+import Link from "next/link";
 
-const montserrat = Montserrat({ weight: '600', subsets: ['latin'] });
+const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
 export default function Home() {
 	return (
