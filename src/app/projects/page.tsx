@@ -3,7 +3,6 @@
 import { Montserrat } from "next/font/google";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
-import Link from "next/link";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
@@ -91,13 +90,13 @@ export default function Projects() {
 							<div className="flex">
 								{project.socials &&
 									project.socials.map((social) => (
-										<Link
+										<a
 											href={social.link}
 											key={social.link}
 											className={`flex my-2 mr-4 w-10 h-10 rounded-full items-center justify-center bg-primary ${social.color} transition duration-200 shadow`}
 										>
 											<Icon icon={social.icon} className="h-4" />
-										</Link>
+										</a>
 									))}
 							</div>
 						</div>
