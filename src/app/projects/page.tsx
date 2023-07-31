@@ -44,7 +44,7 @@ const projects = [
 			{
 				icon: "ph:globe",
 				color: "hover:text-globe",
-				link: "https://cxntered.github.io/crown"
+				link: "https://crown.cxntered.me"
 			},
 			{
 				icon: "fa6-brands:github",
