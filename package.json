@@ -12,26 +12,26 @@
 		"format:fix": "prettier --write ./src"
 	},
 	"dependencies": {
-		"@headlessui/react": "^1.7.16",
-		"@heroicons/react": "^2.0.18",
-		"autoprefixer": "10.4.14",
-		"next": "13.4.12",
-		"postcss": "8.4.27",
+		"@headlessui/react": "^1.7.17",
+		"@heroicons/react": "^2.1.1",
+		"autoprefixer": "10.4.16",
+		"next": "14.0.4",
+		"postcss": "8.4.32",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"tailwindcss": "3.3.3"
+		"tailwindcss": "3.4.0"
 	},
 	"devDependencies": {
 		"@iconify/react": "^4.1.1",
-		"@types/node": "^20.4.5",
-		"@types/react": "^18.2.17",
-		"@types/react-dom": "^18.2.7",
-		"@typescript-eslint/eslint-plugin": "^6.2.0",
-		"@typescript-eslint/parser": "^6.2.0",
-		"eslint": "^8.46.0",
-		"eslint-config-next": "^13.4.12",
-		"eslint-config-prettier": "^8.9.0",
-		"prettier": "^3.0.0",
-		"typescript": "^5.1.6"
+		"@types/node": "^20.10.5",
+		"@types/react": "^18.2.45",
+		"@types/react-dom": "^18.2.18",
+		"@typescript-eslint/eslint-plugin": "^6.16.0",
+		"@typescript-eslint/parser": "^6.16.0",
+		"eslint": "^8.56.0",
+		"eslint-config-next": "^14.0.4",
+		"eslint-config-prettier": "^9.1.0",
+		"prettier": "^3.1.1",
+		"typescript": "^5.3.3"
 	}
 }
