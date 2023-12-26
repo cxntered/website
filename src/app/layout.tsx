@@ -13,13 +13,13 @@ export const metadata: Metadata = {
 	title: "cxntered",
 	description: "cxntered's personal website",
 	openGraph: {
-		title: "cxntered.me",
+		title: "cxntered.dev",
 		description: "cxntered's personal website",
-		url: "https://cxntered.me/",
+		url: "https://cxntered.dev/",
 		siteName: "cxntered",
 		images: [
 			{
-				url: "https://cxntered.me/assets/cxntered.jpg"
+				url: "https://cxntered.dev/assets/cxntered.jpg"
 			}
 		],
 		locale: "en_US",

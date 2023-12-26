@@ -1,6 +1,6 @@
 <div align="center">
 
-# [`website`](https://cxntered.me)
+# [`website`](https://cxntered.dev)
 
 cxntered's personal website.
 
@@ -10,8 +10,8 @@ cxntered's personal website.
 
 ### Requirements
 
-- [`Node.js`](https://nodejs.org/en/): For running the website (`v18 or higher`)
-- [`Yarn`](https://yarnpkg.com/): For installing dependencies (`npm i -g yarn`)
+-   [`Node.js`](https://nodejs.org/en/): For running the website (`v18 or higher`)
+-   [`Yarn`](https://yarnpkg.com/): For installing dependencies (`npm i -g yarn`)
 
 ### Running
 
