@@ -10,16 +10,20 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-	title: "cxntered",
+	title: {
+		default: "cxntered",
+		template: "cxntered | %s"
+	},
 	description: "cxntered's personal website",
+	metadataBase: new URL("https://cxntered.dev"),
 	openGraph: {
-		title: "cxntered.dev",
+		title: "cxntered",
 		description: "cxntered's personal website",
-		url: "https://cxntered.dev/",
-		siteName: "cxntered",
+		url: "/",
+		siteName: "cxntered.dev",
 		images: [
 			{
-				url: "https://cxntered.dev/assets/cxntered.jpg"
+				url: "/assets/cxntered.jpg"
 			}
 		],
 		locale: "en_US",

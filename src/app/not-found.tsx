@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ weight: "900", subsets: ["latin"] });
+
+export const metadata: Metadata = {
+	title: "Not Found"
+}
 
 export default function NotFound() {
 	return (
