@@ -6,7 +6,20 @@ import Image from "next/image";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
-const projects = [
+interface Project {
+	name: string;
+	description: string;
+	image: string;
+	socials: Social[];
+}
+
+interface Social {
+	icon: string;
+	color: string;
+	link: string;
+}
+
+const projects: Project[] = [
 	{
 		name: "Amethyst",
 		description:
