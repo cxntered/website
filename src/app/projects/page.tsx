@@ -1,8 +1,7 @@
-"use client";
-
+import { SiDiscord, SiGithub } from "@icons-pack/react-simple-icons";
+import { ForwardRefExoticComponent, Fragment } from "react";
 import { Montserrat } from "next/font/google";
-import { Icon } from "@iconify/react";
-import { Fragment } from "react";
+import { Globe, Bot } from "lucide-react"
 import Image from "next/image";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
@@ -16,7 +15,8 @@ interface Project {
 }
 
 interface Social {
-	icon: string;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	icon: ForwardRefExoticComponent<any>;
 	color: string;
 	link: string;
 }
@@ -29,22 +29,22 @@ const projects: Project[] = [
 		image: "/assets/Amethyst.png",
 		socials: [
 			{
-				icon: "ph:globe",
+				icon: Globe,
 				color: "hover:text-globe",
 				link: "https://amethyst.cxntered.dev"
 			},
 			{
-				icon: "mdi:robot",
+				icon: Bot,
 				color: "hover:text-robot",
 				link: "https://discord.com/oauth2/authorize?client_id=771667974343360552&permissions=264192&scope=bot%20applications.commands"
 			},
 			{
-				icon: "fa6-brands:discord",
+				icon: SiDiscord,
 				color: "hover:text-discord",
 				link: "https://discord.gg/ekxZPZAKUV"
 			},
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/amethystbot"
 			}
@@ -57,7 +57,7 @@ const projects: Project[] = [
 		image: "/assets/cxntered.jpg",
 		socials: [
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/cxntered/website"
 			}
@@ -70,12 +70,12 @@ const projects: Project[] = [
 		image: "/assets/Quartz.png",
 		socials: [
 			{
-				icon: "ph:globe",
+				icon: Globe,
 				color: "hover:text-globe",
 				link: "https://q.cxntered.dev"
 			},
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/cxntered/quartz"
 			}
@@ -88,12 +88,12 @@ const projects: Project[] = [
 		image: "/assets/Technoblade.png",
 		socials: [
 			{
-				icon: "ph:globe",
+				icon: Globe,
 				color: "hover:text-globe",
 				link: "https://crown.cxntered.dev"
 			},
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/cxntered/crown"
 			}
@@ -106,7 +106,7 @@ const projects: Project[] = [
 		image: "/assets/cxntered.jpg",
 		socials: [
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/cxntered/RankSpoof"
 			}
@@ -119,7 +119,7 @@ const projects: Project[] = [
 		image: "/assets/cxntered.jpg",
 		socials: [
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/cxntered/TextReplacer"
 			}
@@ -132,7 +132,7 @@ const projects: Project[] = [
 		image: "/assets/Hypixel.jpg",
 		socials: [
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/cxntered/hypixel-ban-tracker"
 			}
@@ -145,7 +145,7 @@ const projects: Project[] = [
 		image: "/assets/cxntered.jpg",
 		socials: [
 			{
-				icon: "fa6-brands:github",
+				icon: SiGithub,
 				color: "hover:text-white",
 				link: "https://github.com/cxntered/discord-lootbox-opener"
 			}
@@ -194,7 +194,7 @@ export default function Projects() {
 												key={social.link}
 												className={`flex mr-3 sm:mr-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full items-center justify-center bg-primary ${social.color} transition duration-200 shadow`}
 											>
-												<Icon icon={social.icon} className="h-4" />
+												<social.icon className="h-4" />
 											</a>
 										))}
 								</div>

@@ -1,7 +1,6 @@
-"use client";
-
 import { Montserrat } from "next/font/google";
-import { Icon } from "@iconify/react";
+import { SiDiscord, SiGithub } from "@icons-pack/react-simple-icons";
+import Twitter from "./icons/Twitter";
 import Link from "next/link";
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
@@ -22,19 +21,19 @@ export default function Home() {
 					href="https://discord.com/users/638695599893643274"
 					className="flex mx-2 w-10 h-10 rounded-full items-center justify-center bg-primary hover:text-discord transition duration-200 shadow"
 				>
-					<Icon icon="fa6-brands:discord" className="h-4" />
+					<SiDiscord className="h-4" />
 				</Link>
 				<Link
 					href="https://github.com/cxntered"
 					className="flex mx-2 w-10 h-10 rounded-full items-center justify-center bg-primary shadow"
 				>
-					<Icon icon="fa6-brands:github" className="h-4" />
+					<SiGithub className="h-4" />
 				</Link>
 				<Link
 					href="https://twitter.com/cxntered"
 					className="flex mx-2 w-10 h-10 rounded-full items-center justify-center bg-primary hover:text-twitter transition duration-200 shadow"
 				>
-					<Icon icon="fa6-brands:twitter" className="h-4" />
+					<Twitter className="h-4" />
 				</Link>
 			</div>
 		</main>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment } from "react";
 import { Disclosure, Transition } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Menu, X } from "lucide-react";
 
 const navigation = [
 	{ name: "Home", href: "/" },
@@ -44,9 +44,9 @@ export default function Navbar() {
 								<Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-hover hover:text-white transition duration-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
 									<span className="sr-only">Open main menu</span>
 									{open ? (
-										<XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+										<X className="block h-6 w-6" aria-hidden="true" />
 									) : (
-										<Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+										<Menu className="block h-6 w-6" aria-hidden="true" />
 									)}
 								</Disclosure.Button>
 							</div>
