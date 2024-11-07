@@ -169,6 +169,7 @@ export default function Projects() {
 									alt={project.name}
 									width="24"
 									height="24"
+									loading="eager"
 									className="rounded-full self-center w-4 h-4 sm:w-6 sm:h-6 mr-1.5 sm:mr-2"
 								/>
 								<h4 className="font-semibold text-gray self-center text-sm sm:text-md">{project.repo}</h4>
