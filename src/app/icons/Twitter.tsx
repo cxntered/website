@@ -2,7 +2,10 @@ import { IconType } from "@icons-pack/react-simple-icons";
 import React from "react";
 
 const defaultColor = "#1D9BF0";
-const Twitter: IconType = React.forwardRef(function Twitter({ title = "Twitter", color = "currentColor", size = 24, ...others }, ref) {
+const Twitter: IconType = React.forwardRef(function Twitter(
+	{ title = "Twitter", color = "currentColor", size = 24, ...others },
+	ref
+) {
 	if (color === "default") {
 		color = defaultColor;
 	}

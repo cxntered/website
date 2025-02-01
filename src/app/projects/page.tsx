@@ -1,13 +1,13 @@
 import { SiDiscord, SiGithub } from "@icons-pack/react-simple-icons";
 import { ForwardRefExoticComponent, Fragment } from "react";
 import { Montserrat } from "next/font/google";
-import { Globe, Bot } from "lucide-react"
+import { Globe, Bot } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
 	title: "Projects"
-}
+};
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
@@ -167,7 +167,10 @@ export default function Projects() {
 				</h2>
 				<div className="flex flex-wrap justify-center self-stretch gap-3">
 					{projects.map((project) => (
-						<div className="items-center w-[22rem] md:w-[32rem] lg:w-[28rem] rounded-2xl border border-zinc-600 p-4" key={project.name}>
+						<div
+							className="items-center w-[22rem] md:w-[32rem] lg:w-[28rem] rounded-2xl border border-zinc-600 p-4"
+							key={project.name}
+						>
 							<div className="flex flex-row mb-2">
 								<Image
 									src={project.image}
@@ -177,7 +180,9 @@ export default function Projects() {
 									loading="eager"
 									className="rounded-full self-center w-4 h-4 sm:w-6 sm:h-6 mr-1.5 sm:mr-2"
 								/>
-								<h4 className="font-semibold text-gray self-center text-sm sm:text-md">{project.repo}</h4>
+								<h4 className="font-semibold text-gray self-center text-sm sm:text-md">
+									{project.repo}
+								</h4>
 							</div>
 
 							<div className="text-left flex flex-col justify-between h-[80%]">
@@ -209,10 +214,14 @@ export default function Projects() {
 					))}
 					<div className="items-center w-[22rem] md:w-[32rem] lg:w-[28rem] rounded-2xl border border-zinc-600 p-4 flex flex-col justify-center">
 						<p className="max-w-sm text-md text-gray mb-1">
-							...and many more projects not listed here, such as personal or commissioned projects!
+							...and many more projects not listed here, such as personal or
+							commissioned projects!
 						</p>
 						<p className="max-w-sm text-xs text-zinc-400">
-							<i>feel free to ask for a commission on Discord! if it&apos;s simple and i&apos;m able to code it, i might do it for free!</i>
+							<i>
+								feel free to ask for a commission on Discord! if it&apos;s simple
+								and i&apos;m able to code it, i might do it for free!
+							</i>
 						</p>
 					</div>
 				</div>

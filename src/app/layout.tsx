@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import Script from "next/script";
 import "@/app/styles/globals.css";
 
 const poppins = Poppins({
@@ -40,7 +41,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 					{children}
 				</div>
 				<Footer />
-				<script src="/assets/oneko.js" />
+				<Script src="/assets/oneko.js" />
 			</body>
 		</html>
 	);
