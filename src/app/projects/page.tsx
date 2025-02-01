@@ -2,7 +2,12 @@ import { SiDiscord, SiGithub } from "@icons-pack/react-simple-icons";
 import { ForwardRefExoticComponent, Fragment } from "react";
 import { Montserrat } from "next/font/google";
 import { Globe, Bot } from "lucide-react"
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+	title: "Projects"
+}
 
 const montserrat = Montserrat({ weight: "600", subsets: ["latin"] });
 
@@ -155,7 +160,7 @@ const projects: Project[] = [
 
 export default function Projects() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center text-center px-12 py-20">
+		<main className="flex flex-col flex-grow items-center justify-center text-center px-12 py-5">
 			<div className="m-2">
 				<h2 className={`${montserrat.className} text-lg sm:text-xl font-bold mb-4`}>
 					Projects

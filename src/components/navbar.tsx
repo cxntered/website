@@ -20,7 +20,7 @@ export default function Navbar() {
 	const pathname = usePathname();
 
 	return (
-		<Disclosure as="nav" className="fixed top-0 z-50 w-full bg-primary">
+		<Disclosure as="nav" className="w-full bg-primary">
 			{({ open }) => (
 				<>
 					<div className="mx-auto max-w-7xl px-6 lg:px-8">

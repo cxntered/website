@@ -34,9 +34,11 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={poppins.className}>
-				<Navbar />
-				{children}
+			<body className={`${poppins.className} min-h-screen flex flex-col`}>
+				<div className="flex flex-col flex-grow relative z-[1]">
+					<Navbar />
+					{children}
+				</div>
 				<Footer />
 			</body>
 		</html>
