@@ -40,6 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 					{children}
 				</div>
 				<Footer />
+				<script src="/assets/oneko.js" />
 			</body>
 		</html>
 	);
