@@ -18,6 +18,7 @@ module.exports = {
 				twitter: "#1d9bf0",
 				globe: "#1c70e7",
 				robot: "#90a4ae",
+				modrinth: "#00af5c",
 			},
 			height: {
 				screen: ["100vh", "100dvh"] // 100vh is a fallback for browsers that do not support 100dvh

@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import { Globe, Bot } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Modrinth from "../icons/Modrinth";
 
 export const metadata: Metadata = {
 	title: "Projects"
@@ -108,8 +109,13 @@ const projects: Project[] = [
 		name: "RankSpoof",
 		description: "A Forge 1.8.9 mod to spoof your Hypixel Rank.",
 		repo: "cxntered/RankSpoof",
-		image: "/assets/cxntered.jpg",
+		image: "/assets/RankSpoof.png",
 		socials: [
+			{
+				icon: Modrinth,
+				color: "hover:text-modrinth",
+				link: "https://modrinth.com/mod/rankspoof"
+			},
 			{
 				icon: SiGithub,
 				color: "hover:text-white",
@@ -121,8 +127,13 @@ const projects: Project[] = [
 		name: "TextReplacer",
 		description: "A Forge 1.8.9 mod using OneConfig to replace any text.",
 		repo: "cxntered/TextReplacer",
-		image: "/assets/cxntered.jpg",
+		image: "/assets/TextReplacer.png",
 		socials: [
+			{
+				icon: Modrinth,
+				color: "hover:text-modrinth",
+				link: "https://modrinth.com/mod/textreplacer"
+			},
 			{
 				icon: SiGithub,
 				color: "hover:text-white",
@@ -131,15 +142,54 @@ const projects: Project[] = [
 		]
 	},
 	{
-		name: "Hypixel Ban Tracker",
-		description: "A simple Discord bot that tracks bans on Hypixel.",
-		repo: "cxntered/hypixel-ban-tracker",
-		image: "/assets/Hypixel.jpg",
+		name: "StarHUD",
+		description: "Display fancy HUDS in your game. A backport of StarHUD for Fabric 1.20+ to Forge 1.8.9 using OneConfig.",
+		repo: "cxntered/StarHUD",
+		image: "/assets/StarHUD.png",
 		socials: [
 			{
 				icon: SiGithub,
 				color: "hover:text-white",
-				link: "https://github.com/cxntered/hypixel-ban-tracker"
+				link: "https://github.com/cxntered/StarHUD"
+			}
+		]
+	},
+	{
+		name: "Keyword Bot",
+		description: "A Discord bot to search through videos' metadata & tags to find keywords. Originally made for 2imepass.",
+		repo: "cxntered/keyword-bot",
+		image: "/assets/cxntered.jpg",
+		socials: [
+			{
+				icon: SiGithub,
+				color: "hover:text-white",
+				link: "https://github.com/cxntered/keyword-bot"
+			}
+		]
+	},
+	{
+		name: "Freelook",
+		description: "A Forge 1.8.9 mod that allows you freely look around without moving your head.",
+		repo: "cxntered/Freelook",
+		image: "/assets/cxntered.jpg",
+		socials: [
+			{
+				icon: SiGithub,
+				color: "hover:text-white",
+				link: "https://github.com/cxntered/Freelook"
+			}
+		]
+	},
+	{
+		name: "fat-ass-editor",
+		description: "Free and Trivial Advanced SubStation Subtitles Editor. \n(originally made for converting anime subtitles :3)",
+		repo: "cxntered/fat-ass-editor",
+		image: "/assets/cxntered.jpg",
+		socials: [
+			{
+				icon: SiGithub,
+				color: "hover:text-white",
+				link: "https://github.com/cxntered/fat-ass-editor"
 			}
 		]
 	},
@@ -213,7 +263,7 @@ export default function Projects() {
 						</div>
 					))}
 					<div className="items-center w-[22rem] md:w-[32rem] lg:w-[28rem] rounded-2xl border border-zinc-600 p-4 flex flex-col justify-center">
-						<p className="max-w-sm text-md text-gray mb-1">
+						<p className="max-w-sm text-sm text-gray mb-1">
 							...and many more projects not listed here, such as personal or
 							commissioned projects!
 						</p>
