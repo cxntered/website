@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import LinkButton from "../components/LinkButton.astro";
+import { Image } from "astro:assets";
 
 const SOCIALS = [
 	{
@@ -66,10 +67,12 @@ const SOCIALS = [
 		<p class="text-ctp-text text-center">
 			"<span class="text-ctp-mauve">cxntered</span>" on almost every platform
 			<span class="whitespace-nowrap">
-				(<img
+				(<Image
 					src="https://cdn.7tv.app/emote/01FGSVT61R00064MEQW00DP650/1x.avif"
 					alt="Clueless"
-					class="inline h-5.5 w-5.5"
+					class="inline"
+					width={20}
+					height={20}
 				/>)
 			</span>
 		</p>
