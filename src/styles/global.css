@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "@catppuccin/tailwindcss/mocha.css";
+@import "@fontsource-variable/jetbrains-mono";
+
+body {
+	font-family: "JetBrains Mono Variable", monospace;
+}
+
+@theme {
+	--color-icons-discord: #5865f2;
+	--color-icons-codeberg: #2185d0;
+	--color-icons-modrinth: #00af5c;
+	--color-icons-twitter: #1d9bf0;
+	--color-icons-bluesky: #1185fe;
+	--color-icons-youtube: red;
+	--color-icons-twitch: #9146ff;
+	--color-icons-tetrio: #df4eaa;
+	--color-icons-monkeytype: #e2b714;
+}
+
+@source inline("to-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/10");
+@source inline("{hover:,focus:}to-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/25");
+@source inline("border-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/50");
+@source inline("{hover:,focus:}border-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}");
+@source inline("text-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}");
+@source inline("to-{white,ctp-blue}/10");
+@source inline("{hover:,focus:}to-{white,ctp-blue}/25");
+@source inline("border-{white,ctp-blue}/50");
+@source inline("{hover:,focus:}border-{white,ctp-blue}");
+@source inline("text-{white,ctp-blue}");
+
+@utility prose-catppuccin {
+	--tw-prose-body: var(--color-ctp-text);
+	--tw-prose-headings: var(--color-ctp-text);
+	--tw-prose-lead: var(--color-ctp-overlay2);
+	--tw-prose-links: var(--color-ctp-blue);
+	--tw-prose-bold: var(--color-ctp-text);
+	--tw-prose-counters: var(--color-overlay0);
+	--tw-prose-bullets: var(--color-ctp-surface2);
+	--tw-prose-hr: var(--color-ctp-surface1);
+	--tw-prose-quotes: var(--color-ctp-subtext0);
+	--tw-prose-quote-borders: var(--color-ctp-overlay2);
+	--tw-prose-captions: var(--color-ctp-text);
+	--tw-prose-kbd: var(--color-ctp-overlay2);
+	--tw-prose-kbd-shadows: color-mix(in oklab, var(--color-ctp-overlay2) 50%, transparent);
+	--tw-prose-code: var(--color-ctp-subtext0);
+	--tw-prose-pre-code: var(--color-ctp-subtext1);
+	--tw-prose-pre-bg: var(--color-ctp-mantle);
+	--tw-prose-th-borders: var(--color-ctp-surface2);
+	--tw-prose-td-borders: var(--color-ctp-surface0);
+}

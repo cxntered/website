@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { icon, href, text, isColored = true } = Astro.props;
+
+const iconName = icon.includes(":") ? icon.split(":")[1] : icon;
+
+const COLORS: Record<string, string> = {
+	github: "white",
+	namemc: "white",
+	world: "ctp-blue",
+};
+
+const color = COLORS[iconName] || `icons-${iconName}`;
+---
+
+<a
+	href={href}
+	class={`flex flex-row items-center rounded-md gap-2 px-2 py-1 transition-colors ${
+		isColored
+			? `bg-linear-to-b from-white/0 to-${color}/10 hover:to-${color}/25 focus:to-${color}/25 border border-${color}/50 hover:border-${color} focus:border-${color} text-ctp-text`
+			: `bg-ctp-subtext0 hover:bg-ctp-text focus:bg-ctp-text text-ctp-crust`
+	}`}
+	target="_blank"
+>
+	<Icon name={icon} size="24" class={isColored ? `text-${color}` : "text-ctp-base"} />
+	<span class="text-md">{text}</span>
+</a>

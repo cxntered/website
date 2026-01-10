@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+
+const { currentPath } = Astro.props;
+
+const isActive = (path: string) => {
+	return currentPath === path || (path !== "/" && currentPath.startsWith(path));
+};
+---
+
+<header class="bg-ctp-crust border-ctp-surface0 relative flex flex-col items-center gap-4 border p-4 sm:flex-row">
+	<span id="oneko"></span>
+	<div class="flex grow flex-row items-center gap-2">
+		<Image src="/cxntered.jpg" alt="cxntered's profile picture" width={32} height={32} class="rounded-full" />
+		<h1 class="text-ctp-text text-xl font-bold">cxntered</h1>
+	</div>
+	<nav class="flex flex-row gap-4">
+		<a
+			href="/"
+			class={`transition-colors ${isActive("/") ? "text-ctp-mauve" : "text-ctp-subtext0 hover:text-ctp-text focus:text-ctp-text"}`}
+		>
+			home
+		</a>
+		<a
+			href="/about"
+			class={`transition-colors ${isActive("/about") ? "text-ctp-mauve" : "text-ctp-subtext0 hover:text-ctp-text focus:text-ctp-text"}`}
+		>
+			about
+		</a>
+		<a
+			href="/socials"
+			class={`transition-colors ${isActive("/socials") ? "text-ctp-mauve" : "text-ctp-subtext0 hover:text-ctp-text focus:text-ctp-text"}`}
+		>
+			socials
+		</a>
+		<a
+			href="/projects"
+			class={`transition-colors ${isActive("/projects") ? "text-ctp-mauve" : "text-ctp-subtext0 hover:text-ctp-text focus:text-ctp-text"}`}
+		>
+			projects
+		</a>
+	</nav>
+</header>
+
+<style>
+	#oneko {
+		background-image: url("/oneko.png");
+		image-rendering: pixelated;
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		bottom: calc(100% - 3px);
+		right: 12px;
+		animation: sleep 2s steps(1) infinite;
+		cursor: grab;
+
+		&:active {
+			cursor: grabbing;
+		}
+	}
+
+	@keyframes sleep {
+		0% {
+			background-position: -64px 0;
+		}
+		50% {
+			background-position: -64px -32px;
+		}
+	}
+</style>

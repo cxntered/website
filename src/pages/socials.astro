@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkButton from "../components/LinkButton.astro";
+
+const SOCIALS = [
+	{
+		icon: "simple-icons:discord",
+		href: "https://discord.com/users/638695599893643274",
+		text: "@cxntered",
+	},
+	{
+		icon: "simple-icons:github",
+		href: "https://github.com/cxntered",
+		text: "/cxntered",
+	},
+	{
+		icon: "simple-icons:codeberg",
+		href: "https://codeberg.org/cxn",
+		text: "/cxn",
+	},
+	{
+		icon: "simple-icons:modrinth",
+		href: "https://modrinth.com/user/cxntered",
+		text: "/cxntered",
+	},
+	{
+		icon: "twitter", // they did NOT rebrand to x in july 2023, whoever is telling you that is lying
+		href: "https://twitter.com/cxntered",
+		text: "@cxntered",
+	},
+	{
+		icon: "simple-icons:bluesky",
+		href: "https://bsky.app/profile/cxntered.dev",
+		text: "@cxntered.dev",
+	},
+	{
+		icon: "simple-icons:youtube",
+		href: "https://youtube.com/@cxntered",
+		text: "@cxntered",
+	},
+	{
+		icon: "twitch", // we use our local twitch icon bc simple-icons doesn't have a white backfill
+		href: "https://twitch.tv/zcxntered",
+		text: "/zcxntered", // "z" 😡
+	},
+	{
+		icon: "simple-icons:namemc",
+		href: "https://namemc.com/profile/cxntered.1",
+		text: "cxntered",
+	},
+	{
+		icon: "tetrio",
+		href: "https://ch.tetr.io/u/cxntered",
+		text: "cxntered",
+	},
+	{
+		icon: "simple-icons:monkeytype",
+		href: "https://monkeytype.com/profile/cxntered",
+		text: "cxntered",
+	},
+];
+---
+
+<Layout>
+	<div class="bg-ctp-crust border-ctp-surface0 flex flex-col items-center gap-4 border p-6">
+		<p class="text-ctp-text text-center">
+			"<span class="text-ctp-mauve">cxntered</span>" on almost every platform
+			<span class="whitespace-nowrap">
+				(<img
+					src="https://cdn.7tv.app/emote/01FGSVT61R00064MEQW00DP650/1x.avif"
+					alt="Clueless"
+					class="inline h-5.5 w-5.5"
+				/>)
+			</span>
+		</p>
+		<div class="flex flex-row flex-wrap justify-center gap-2.5 px-4">
+			{SOCIALS.map((social) => <LinkButton icon={social.icon} href={social.href} text={social.text} />)}
+		</div>
+	</div>
+</Layout>

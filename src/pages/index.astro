@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkButton from "../components/LinkButton.astro";
+
+const SOCIALS = [
+	{
+		icon: "simple-icons:discord",
+		href: "https://discord.com/users/638695599893643274",
+		text: "@cxntered",
+	},
+	{
+		icon: "simple-icons:github",
+		href: "https://github.com/cxntered",
+		text: "/cxntered",
+	},
+	{
+		icon: "twitter",
+		href: "https://twitter.com/cxntered",
+		text: "@cxntered",
+	},
+];
+---
+
+<Layout>
+	<div class="bg-ctp-crust border-ctp-surface0 flex flex-col items-center gap-4 border p-6">
+		<p class="text-ctp-text text-center">
+			dumbass nerd who makes stupid things for my use & enjoyment
+			<span class="whitespace-nowrap">(・∀・)ﾉﾞ</span>
+		</p>
+		<div class="flex flex-row flex-wrap justify-center gap-x-3 gap-y-2 sm:gap-x-4">
+			{
+				SOCIALS.map(({ icon, href, text }) => (
+					<LinkButton icon={icon} href={href} text={text} isColored={false} />
+				))
+			}
+		</div>
+	</div>
+</Layout>

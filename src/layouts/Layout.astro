@@ -1,0 +1,21 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import { fade } from "astro:transitions";
+import "../styles/global.css";
+
+const currentPath = Astro.url.pathname;
+---
+
+<html lang="en" class="bg-ctp-base">
+	<Head />
+	<body class="flex min-h-dvh" transition:animate={fade({ duration: "0.15s" })}>
+		<div class="m-auto flex max-w-3xl grow flex-col gap-2 px-4.5">
+			<Header currentPath={currentPath} />
+			<main>
+				<slot />
+			</main>
+			<p class="text-ctp-overlay0 text-center text-sm">© 2026 cxntered</p>
+		</div>
+	</body>
+</html>

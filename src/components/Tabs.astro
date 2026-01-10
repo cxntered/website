@@ -1,0 +1,68 @@
+---
+interface Props {
+	tabs: { id: string; label: string }[];
+	defaultTab?: string;
+}
+
+const { tabs, defaultTab = tabs[0]?.id } = Astro.props;
+---
+
+<div class="tabs-container">
+	<div class="tabs-header bg-ctp-crust border-ctp-surface0 flex flex-row gap-4 border p-4">
+		{
+			tabs.map((tab) => (
+				<button
+					class={`tab-button px-4 py-2 transition-colors ${
+						tab.id === defaultTab
+							? "text-ctp-mauve border-ctp-mauve border-b-2"
+							: "text-ctp-subtext0 hover:text-ctp-text"
+					}`}
+					data-tab={tab.id}
+				>
+					{tab.label}
+				</button>
+			))
+		}
+	</div>
+	<div class="tabs-content">
+		<slot />
+	</div>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const tabButtons = document.querySelectorAll(".tab-button");
+		const tabPanels = document.querySelectorAll(".tab-panel");
+
+		tabButtons.forEach((button) => {
+			button.addEventListener("click", () => {
+				const targetTab = button.getAttribute("data-tab");
+
+				// Update button states
+				tabButtons.forEach((btn) => {
+					btn.classList.remove("text-ctp-mauve", "border-b-2", "border-ctp-mauve");
+					btn.classList.add("text-ctp-subtext0");
+				});
+				button.classList.remove("text-ctp-subtext0");
+				button.classList.add("text-ctp-mauve", "border-b-2", "border-ctp-mauve");
+
+				// Update panel visibility
+				tabPanels.forEach((panel) => {
+					if (panel.getAttribute("data-tab-panel") === targetTab) {
+						panel.classList.remove("hidden");
+					} else {
+						panel.classList.add("hidden");
+					}
+				});
+			});
+		});
+	});
+</script>
+
+<style>
+	.tab-button {
+		cursor: pointer;
+		background: none;
+		border: none;
+	}
+</style>
