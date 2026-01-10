@@ -20,14 +20,14 @@ body {
 }
 
 @source inline("to-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/10");
-@source inline("{hover:,focus:}to-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/25");
+@source inline("{hover:,focus-visible:}to-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/25");
 @source inline("border-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/50");
-@source inline("{hover:,focus:}border-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}");
+@source inline("{hover:,focus-visible:}border-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}");
 @source inline("text-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}");
 @source inline("to-{white,ctp-blue}/10");
-@source inline("{hover:,focus:}to-{white,ctp-blue}/25");
+@source inline("{hover:,focus-visible:}to-{white,ctp-blue}/25");
 @source inline("border-{white,ctp-blue}/50");
-@source inline("{hover:,focus:}border-{white,ctp-blue}");
+@source inline("{hover:,focus-visible:}border-{white,ctp-blue}");
 @source inline("text-{white,ctp-blue}");
 
 @utility prose-catppuccin {

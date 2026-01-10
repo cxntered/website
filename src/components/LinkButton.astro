@@ -18,8 +18,8 @@ const color = COLORS[iconName] || `icons-${iconName}`;
 	href={href}
 	class={`flex flex-row items-center rounded-md gap-2 px-2 py-1 transition-colors ${
 		isColored
-			? `bg-linear-to-b from-white/0 to-${color}/10 hover:to-${color}/25 focus:to-${color}/25 border border-${color}/50 hover:border-${color} focus:border-${color} text-ctp-text`
-			: `bg-ctp-subtext0 hover:bg-ctp-text focus:bg-ctp-text text-ctp-crust`
+			? `bg-linear-to-b from-white/0 to-${color}/10 hover:to-${color}/25 focus-visible:to-${color}/25 border border-${color}/50 hover:border-${color} focus-visible:border-${color} text-ctp-text`
+			: `bg-ctp-subtext0 hover:bg-ctp-text focus-visible:bg-ctp-text text-ctp-crust`
 	}`}
 	target="_blank"
 >
