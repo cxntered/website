@@ -8,7 +8,13 @@ const { currentPath } = Astro.props;
 <header class="bg-ctp-crust border-ctp-surface0 relative flex flex-col items-center gap-4 border p-4 sm:flex-row">
 	<span id="oneko"></span>
 	<div class="flex grow flex-row items-center gap-2">
-		<Image src="/cxntered.jpg" alt="cxntered's profile picture" width={32} height={32} class="rounded-full" />
+		<Image
+			src="/images/cxntered.jpg"
+			alt="cxntered's profile picture"
+			width={32}
+			height={32}
+			class="rounded-full"
+		/>
 		<h1 class="text-ctp-text text-xl font-bold">cxntered</h1>
 	</div>
 	<Tabs currentPath={currentPath} />
@@ -16,7 +22,7 @@ const { currentPath } = Astro.props;
 
 <style>
 	#oneko {
-		background-image: url("/oneko.png");
+		background-image: url("/images/oneko.png");
 		image-rendering: pixelated;
 		position: absolute;
 		width: 32px;
