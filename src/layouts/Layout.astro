@@ -10,7 +10,7 @@ const currentPath = Astro.url.pathname;
 <html lang="en" class="bg-ctp-base">
 	<Head />
 	<body class="flex min-h-dvh" transition:animate={fade({ duration: "0.15s" })}>
-		<div class="m-auto flex max-w-3xl grow flex-col gap-2 px-4.5">
+		<div class="m-auto flex max-w-3xl grow flex-col gap-2 px-4.5 py-8">
 			<Header currentPath={currentPath} />
 			<main>
 				<slot />
