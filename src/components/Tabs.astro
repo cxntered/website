@@ -18,6 +18,7 @@ const isActive = (path: string) => {
 		tabs.map(({ path, label }) => (
 			<a
 				href={path}
+				aria-current={isActive(path) ? "page" : undefined}
 				class={`transition-colors ${
 					isActive(path)
 						? "text-ctp-mauve"

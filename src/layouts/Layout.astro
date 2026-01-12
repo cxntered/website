@@ -15,7 +15,7 @@ const currentPath = Astro.url.pathname;
 			<main class="bg-ctp-crust border-ctp-surface0 flex flex-col gap-4 rounded-lg border p-6">
 				<slot />
 			</main>
-			<footer>
+			<footer transition:persist>
 				<p class="text-ctp-overlay0 text-center text-sm">© 2026 cxntered</p>
 			</footer>
 		</div>

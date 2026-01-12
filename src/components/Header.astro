@@ -8,8 +8,8 @@ const { currentPath } = Astro.props;
 <header
 	class="bg-ctp-crust border-ctp-surface0 relative flex flex-col items-center gap-4 rounded-lg border p-4 sm:flex-row"
 >
-	<span id="oneko"></span>
-	<div class="flex grow flex-row items-center gap-2">
+	<span id="oneko" aria-hidden="true"></span>
+	<div class="flex grow flex-row items-center gap-2" transition:persist>
 		<Image
 			src="/images/cxntered.jpg"
 			alt="cxntered's profile picture"

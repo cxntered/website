@@ -22,7 +22,8 @@ const color = COLORS[iconName] || `icons-${iconName}`;
 			: `bg-ctp-subtext0 hover:bg-ctp-text focus-visible:bg-ctp-text text-ctp-crust`
 	}`}
 	target="_blank"
+	rel="noopener noreferrer"
 >
-	<Icon name={icon} size="24" class={isColored ? `text-${color}` : "text-ctp-base"} />
+	<Icon name={icon} size="24" class={isColored ? `text-${color}` : "text-ctp-crust"} />
 	<span class="text-md">{text}</span>
 </a>
