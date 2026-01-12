@@ -5,7 +5,9 @@ import Tabs from "./Tabs.astro";
 const { currentPath } = Astro.props;
 ---
 
-<header class="bg-ctp-crust border-ctp-surface0 relative flex flex-col items-center gap-4 border p-4 sm:flex-row">
+<header
+	class="bg-ctp-crust border-ctp-surface0 relative flex flex-col items-center gap-4 rounded-lg border p-4 sm:flex-row"
+>
 	<span id="oneko"></span>
 	<div class="flex grow flex-row items-center gap-2">
 		<Image
