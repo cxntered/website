@@ -63,22 +63,20 @@ const SOCIALS = [
 ---
 
 <Layout>
-	<div class="bg-ctp-crust border-ctp-surface0 flex flex-col items-center gap-4 border p-6">
-		<p class="text-ctp-text text-center">
-			"<span class="text-ctp-mauve">cxntered</span>" on almost every platform
-			<span class="whitespace-nowrap">
-				(<Image
-					src="/images/Clueless.png"
-					alt="Clueless"
-					class="inline"
-					width={20}
-					height={20}
-					fetchpriority="high"
-				/>)
-			</span>
-		</p>
-		<div class="flex flex-row flex-wrap justify-center gap-2.5 md:px-4">
-			{SOCIALS.map((social) => <LinkButton icon={social.icon} href={social.href} text={social.text} />)}
-		</div>
+	<p class="text-ctp-text text-center">
+		"<span class="text-ctp-mauve">cxntered</span>" on almost every platform
+		<span class="whitespace-nowrap">
+			(<Image
+				src="/images/Clueless.png"
+				alt="Clueless"
+				class="inline"
+				width={20}
+				height={20}
+				fetchpriority="high"
+			/>)
+		</span>
+	</p>
+	<div class="flex flex-row flex-wrap justify-center gap-2.5 md:px-4">
+		{SOCIALS.map((social) => <LinkButton icon={social.icon} href={social.href} text={social.text} />)}
 	</div>
 </Layout>

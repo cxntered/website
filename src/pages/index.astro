@@ -22,17 +22,11 @@ const SOCIALS = [
 ---
 
 <Layout>
-	<div class="bg-ctp-crust border-ctp-surface0 flex flex-col items-center gap-4 border p-6">
-		<p class="text-ctp-text text-center">
-			dumbass nerd who makes stupid things for my use & enjoyment
-			<span class="whitespace-nowrap">(・∀・)ﾉﾞ</span>
-		</p>
-		<div class="flex flex-row flex-wrap justify-center gap-x-3 gap-y-2 sm:gap-x-4">
-			{
-				SOCIALS.map(({ icon, href, text }) => (
-					<LinkButton icon={icon} href={href} text={text} isColored={false} />
-				))
-			}
-		</div>
+	<p class="text-ctp-text text-center">
+		dumbass nerd who makes stupid things for my use & enjoyment
+		<span class="whitespace-nowrap">(・∀・)ﾉﾞ</span>
+	</p>
+	<div class="flex flex-row flex-wrap justify-center gap-x-3 gap-y-2 sm:gap-x-4">
+		{SOCIALS.map(({ icon, href, text }) => <LinkButton icon={icon} href={href} text={text} isColored={false} />)}
 	</div>
 </Layout>
