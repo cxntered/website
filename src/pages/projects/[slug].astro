@@ -16,7 +16,7 @@ const { project } = Astro.props;
 const { Content } = await project.render();
 ---
 
-<Layout>
+<Layout title={project.data.name}>
 	<a
 		href="/projects"
 		class="text-ctp-mauve/90 hover:text-ctp-mauve/70 flex flex-row items-center gap-1.5 self-start transition-colors"
