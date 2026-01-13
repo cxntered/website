@@ -25,7 +25,7 @@ const CONTRIBUTIONS = [
 <Layout>
 	<p class="text-ctp-subtext0 italic">click to see more info!</p>
 	<div class="flex flex-col items-start gap-2">
-		<h1 class="text-ctp-red"># projects</h1>
+		<h2 class="text-ctp-red">## projects</h2>
 		{
 			sortedProjects.map((project) => (
 				<a
@@ -48,7 +48,7 @@ const CONTRIBUTIONS = [
 		</div>
 	</div>
 	<div class="flex flex-col items-start gap-2">
-		<h1 class="text-ctp-red"># contributions</h1>
+		<h2 class="text-ctp-red">## contributions</h2>
 		{
 			CONTRIBUTIONS.map((project) => (
 				<a href={project.link} target="_blank" class="flex flex-row items-center">
