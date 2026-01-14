@@ -5,7 +5,7 @@ description: "A Discord bot to find keywords in YouTube videos"
 order: 9
 links:
     - icon: "simple-icons:github"
-      href: "https://github.com/cxntered/pointer"
+      href: "https://github.com/cxntered/keyword-bot"
       text: "repository"
       color: "white"
 ---

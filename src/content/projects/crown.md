@@ -9,7 +9,7 @@ links:
       text: "website"
       color: "blue"
     - icon: "simple-icons:github"
-      href: "https://github.com/cxntered/cxntered.dev"
+      href: "https://github.com/cxntered/crown"
       text: "repository"
       color: "white"
 ---
