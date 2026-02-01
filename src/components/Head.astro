@@ -1,6 +1,9 @@
 ---
 import { ClientRouter } from "astro:transitions";
 
+import "@fontsource-variable/jetbrains-mono";
+import jetbrainsMono from "@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2?url";
+
 const title = Astro.props.title ? `cxntered | ${Astro.props.title}` : "cxntered";
 const description = "cxntered's personal website";
 ---
@@ -16,6 +19,9 @@ const description = "cxntered's personal website";
 	<meta name="theme-color" content="#1e1e2e" />
 
 	<link rel="canonical" href="https://cxntered.dev" />
+
+	<!-- font -->
+	<link rel="preload" as="font" type="font/woff2" href={jetbrainsMono} crossorigin="anonymous" />
 
 	<!-- favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

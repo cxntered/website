@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @import "@catppuccin/tailwindcss/mocha.css";
-@import "@fontsource-variable/jetbrains-mono";
 
 body {
 	font-family: "JetBrains Mono Variable", monospace;
