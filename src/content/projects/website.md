@@ -14,3 +14,5 @@ links:
 
 my personal website!! <br />
 designed in [Figma](https://figma.com), built with [Astro](https://astro.build), styled with [Tailwind CSS](https://tailwindcss.com), and themed with [Catppuccin](https://catppuccin.com).
+
+_(p.s. you can pet the cat!!)_
