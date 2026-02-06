@@ -17,7 +17,16 @@ const currentPath = Astro.url.pathname;
 				<slot />
 			</main>
 			<footer transition:persist>
-				<p class="text-ctp-overlay0 text-center text-sm">© 2026 cxntered</p>
+				<p class="text-ctp-overlay0 text-center text-sm">
+					made with ❤ •
+					<a
+						href="https://github.com/cxntered/website"
+						class="hover:text-ctp-overlay1 underline underline-offset-4 transition-colors"
+						target="_blank"
+					>
+						source code
+					</a>
+				</p>
 			</footer>
 		</div>
 	</body>
