@@ -9,7 +9,7 @@ const { currentPath } = Astro.props;
 	class="bg-ctp-crust border-ctp-surface0 relative flex flex-col items-center gap-4 rounded-lg border p-4 sm:flex-row"
 >
 	<span id="oneko" aria-hidden="true"></span>
-	<div class="flex grow flex-row items-center gap-2" transition:persist>
+	<div class="flex grow flex-row items-center gap-2.5" transition:persist>
 		<Image
 			src="/images/cxntered.jpg"
 			alt="cxntered's profile picture"
@@ -17,7 +17,7 @@ const { currentPath } = Astro.props;
 			height={32}
 			class="rounded-full"
 		/>
-		<h1 class="text-ctp-text text-xl font-bold">cxntered</h1>
+		<h1 class="text-ctp-text text-xl">cxntered</h1>
 	</div>
 	<Tabs currentPath={currentPath} />
 </header>
