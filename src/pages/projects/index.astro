@@ -8,6 +8,12 @@ const sortedProjects = projects.sort((a, b) => (a.data.order ?? 999) - (b.data.o
 
 const CONTRIBUTIONS = [
 	{
+		name: "Polyfrost",
+		icon: "catppuccin:java-class-final", // mhm
+		description: "Passionate creators redefining the modding community",
+		link: "https://github.com/Polyfrost",
+	},
+	{
 		name: "Catppuccin for Discord",
 		icon: "catppuccin:sass",
 		description: "Soothing pastel theme for Discord",
@@ -28,34 +34,45 @@ const CONTRIBUTIONS = [
 		<h2 class="text-ctp-red">## projects</h2>
 		{
 			sortedProjects.map((project) => (
-				<a
-					href={`/projects/${project.slug}`}
-					class="hover:text-ctp-mauve flex flex-row items-center transition-colors"
-				>
+				<a href={`/projects/${project.slug}`} class="group flex flex-row items-center transition-colors">
 					<Icon name={project.data.icon} class="mr-2 h-6 w-6 shrink-0" />
 					<div class="flex flex-col md:flex-row md:gap-2.5">
-						<h2 class="text-ctp-text font-bold whitespace-nowrap">{project.data.name}</h2>
-						<p class="text-ctp-subtext0">{project.data.description}</p>
+						<h2 class="text-ctp-text whitespace-nowrap">{project.data.name}</h2>
+						<p class="text-ctp-overlay2 group-hover:text-ctp-subtext0 transition-colors">
+							{project.data.description}
+						</p>
 					</div>
 				</a>
 			))
 		}
-		<div class="text-ctp-subtext1 flex flex-col sm:flex-row sm:items-center sm:gap-2.5">
-			<a href="https://github.com/cxntered?tab=repositories" class="underline underline-offset-2" target="_blank">
-				...and many more!!</a
+		<div class="flex flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-2.5">
+			<a
+				href="https://github.com/cxntered?tab=repositories"
+				class="text-ctp-subtext0 hover:text-ctp-subtext1 underline underline-offset-4 transition-colors"
+				target="_blank"
 			>
-			<p class="text-ctp-overlay1 text-sm">(including commissions! dm me if interested)</p>
+				...and many more!!
+			</a>
+			<p class="text-ctp-overlay1 text-sm">
+				(including commissions!
+				<a href="/socials">
+					<span class="hover:text-ctp-overlay2 underline underline-offset-4 transition-colors">dm me</span>
+				</a>
+				if interested :o)
+			</p>
 		</div>
 	</div>
 	<div class="flex flex-col items-start gap-2">
 		<h2 class="text-ctp-red">## contributions</h2>
 		{
 			CONTRIBUTIONS.map((project) => (
-				<a href={project.link} target="_blank" class="flex flex-row items-center">
+				<a href={project.link} target="_blank" class="group flex flex-row items-center">
 					<Icon name={project.icon} class="mr-2 h-6 w-6 shrink-0" />
 					<div class="flex flex-col md:flex-row md:gap-2.5">
 						<h2 class="text-ctp-text whitespace-nowrap">{project.name}</h2>
-						<p class="text-ctp-subtext0">{project.description}</p>
+						<p class="text-ctp-overlay2 group-hover:text-ctp-subtext0 transition-colors">
+							{project.description}
+						</p>
 					</div>
 				</a>
 			))
