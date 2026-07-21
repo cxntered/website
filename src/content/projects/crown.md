@@ -7,11 +7,9 @@ links:
     - icon: "tabler:world"
       href: "https://crown.cxntered.dev"
       text: "website"
-      color: "blue"
     - icon: "simple-icons:github"
       href: "https://github.com/cxntered/crown"
       text: "repository"
-      color: "white"
 ---
 
 made in honor of Technoblade. fly high, and rest in peace 🕊️

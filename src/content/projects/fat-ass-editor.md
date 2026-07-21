@@ -7,7 +7,6 @@ links:
     - icon: "simple-icons:github"
       href: "https://github.com/cxntered/fat-ass-editor"
       text: "repository"
-      color: "white"
 ---
 
 originally made for quickly converting anime subtitles :3

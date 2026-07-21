@@ -1,19 +1,19 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import LinkButton from "../../components/LinkButton.astro";
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
 	const projects = await getCollection("projects");
 	return projects.map((project) => ({
-		params: { slug: project.slug },
+		params: { id: project.id },
 		props: { project },
 	}));
-}
+};
 
 const { project } = Astro.props;
-const { Content } = await project.render();
+const { Content } = await render(project);
 ---
 
 <Layout title={project.data.name}>

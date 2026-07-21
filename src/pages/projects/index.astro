@@ -34,7 +34,7 @@ const CONTRIBUTIONS = [
 		<h2 class="text-ctp-red">## projects</h2>
 		{
 			sortedProjects.map((project) => (
-				<a href={`/projects/${project.slug}`} class="group flex flex-row items-center transition-colors">
+				<a href={`/projects/${project.id}`} class="group flex flex-row items-center transition-colors">
 					<Icon name={project.data.icon} class="mr-2 h-6 w-6 shrink-0" />
 					<div class="flex flex-col md:flex-row md:gap-2.5">
 						<h2 class="text-ctp-text whitespace-nowrap">{project.data.name}</h2>
@@ -54,11 +54,9 @@ const CONTRIBUTIONS = [
 				...and many more!!
 			</a>
 			<p class="text-ctp-overlay1 text-sm">
-				(including commissions!
-				<a href="/socials">
+				(including commissions! <a href="/socials">
 					<span class="hover:text-ctp-overlay2 underline underline-offset-4 transition-colors">dm me</span>
-				</a>
-				if interested :o)
+				</a> if interested :o)
 			</p>
 		</div>
 	</div>

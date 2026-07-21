@@ -1,0 +1,4 @@
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - '@fontsource-variable/jetbrains-mono@5.3.0'

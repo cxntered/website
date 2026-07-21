@@ -7,7 +7,6 @@ links:
     - icon: "simple-icons:github"
       href: "https://github.com/cxntered/youtubeMusicControls"
       text: "repository"
-      color: "white"
 ---
 
 a [Vencord](https://vencord.dev) plugin that adds a [YouTube Music](https://music.youtube.com) player above the account panel in Discord.

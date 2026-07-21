@@ -3,7 +3,7 @@
 @import "@catppuccin/tailwindcss/mocha.css";
 
 body {
-	font-family: "JetBrains Mono Variable", monospace;
+	font-family: var(--font-jetbrains-mono);
 }
 
 @theme {

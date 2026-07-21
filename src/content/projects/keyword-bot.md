@@ -7,7 +7,6 @@ links:
     - icon: "simple-icons:github"
       href: "https://github.com/cxntered/keyword-bot"
       text: "repository"
-      color: "white"
 ---
 
 scans through video metadata and video tags to find keywords.
