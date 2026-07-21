@@ -1,31 +1,13 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
+import Layout from "../../layouts/Layout.astro";
 
 const projects = await getCollection("projects");
 const sortedProjects = projects.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
 
-const CONTRIBUTIONS = [
-	{
-		name: "Polyfrost",
-		icon: "catppuccin:java-class-final", // mhm
-		description: "Passionate creators redefining the modding community",
-		link: "https://github.com/Polyfrost",
-	},
-	{
-		name: "Catppuccin for Discord",
-		icon: "catppuccin:sass",
-		description: "Soothing pastel theme for Discord",
-		link: "https://github.com/catppuccin/discord",
-	},
-	{
-		name: "Pear Desktop",
-		icon: "catppuccin:typescript",
-		description: "An extension for a certain red music player",
-		link: "https://github.com/pear-devs/pear-desktop",
-	},
-];
+const contributions = await getCollection("contributions");
+const sortedContributions = contributions.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
 ---
 
 <Layout title="projects">
@@ -63,13 +45,13 @@ const CONTRIBUTIONS = [
 	<div class="flex flex-col items-start gap-2">
 		<h2 class="text-ctp-red">## contributions</h2>
 		{
-			CONTRIBUTIONS.map((project) => (
-				<a href={project.link} target="_blank" class="group flex flex-row items-center">
-					<Icon name={project.icon} class="mr-2 h-6 w-6 shrink-0" />
+			sortedContributions.map((project) => (
+				<a href={project.data.link} target="_blank" class="group flex flex-row items-center">
+					<Icon name={project.data.icon} class="mr-2 h-6 w-6 shrink-0" />
 					<div class="flex flex-col md:flex-row md:gap-2.5">
-						<h2 class="text-ctp-text whitespace-nowrap">{project.name}</h2>
+						<h2 class="text-ctp-text whitespace-nowrap">{project.data.name}</h2>
 						<p class="text-ctp-overlay2 group-hover:text-ctp-subtext0 transition-colors">
-							{project.description}
+							{project.data.description}
 						</p>
 					</div>
 				</a>

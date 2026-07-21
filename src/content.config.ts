@@ -1,5 +1,5 @@
 import { defineCollection } from "astro:content";
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 import { z } from "astro/zod";
 
 const projects = defineCollection({
@@ -22,4 +22,15 @@ const projects = defineCollection({
 	}),
 });
 
-export const collections = { projects };
+const contributions = defineCollection({
+	loader: file("./src/content/contributions.json"),
+	schema: z.object({
+		name: z.string(),
+		icon: z.string(),
+		description: z.string(),
+		link: z.string(),
+		order: z.number().optional(),
+	}),
+});
+
+export const collections = { projects, contributions };

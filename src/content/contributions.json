@@ -1,0 +1,24 @@
+{
+	"$schema": "../../.astro/collections/contributions.schema.json",
+	"polyfrost": {
+		"name": "Polyfrost",
+		"icon": "catppuccin:java-class-final",
+		"description": "Passionate creators redefining the modding community",
+		"link": "https://github.com/Polyfrost",
+		"order": 1
+	},
+	"catppuccin-discord": {
+		"name": "Catppuccin for Discord",
+		"icon": "catppuccin:sass",
+		"description": "Soothing pastel theme for Discord",
+		"link": "https://github.com/catppuccin/discord",
+		"order": 2
+	},
+	"pear-desktop": {
+		"name": "Pear Desktop",
+		"icon": "catppuccin:typescript",
+		"description": "An extension for a certain red music player",
+		"link": "https://github.com/pear-devs/pear-desktop",
+		"order": 3
+	}
+}
