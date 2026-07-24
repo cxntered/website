@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import skillicons from "../images/skillicons.svg";
 ---
 
 <Layout title="about">
@@ -21,13 +22,12 @@ import Layout from "../layouts/Layout.astro";
 	</div>
 	<div class="flex flex-col gap-2">
 		<h2 class="text-ctp-red">## skills</h2>
+		<!-- taken from skillicons.dev -->
 		<Image
-			src="https://skillicons.dev/icons?theme=dark&i=js,ts,nodejs,html,css,react,java,kotlin,py,go,astro"
+			src={skillicons}
 			alt="javascript, typescript, nodejs, html, css, react, java, kotlin, python, go, astro"
 			class="self-start"
-			width="508.75"
 			height="40"
-			fetchpriority="high"
 		/>
 	</div>
 	<div class="flex flex-col gap-2">

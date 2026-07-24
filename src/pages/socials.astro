@@ -1,7 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import LinkButton from "../components/LinkButton.astro";
-import { Image } from "astro:assets";
+import clueless from "../images/Clueless.png";
 
 const SOCIALS = [
 	{
@@ -65,14 +66,7 @@ const SOCIALS = [
 <Layout title="socials">
 	<p class="text-ctp-text text-center">
 		"<span id="cxntered">cxntered</span>" on almost every platform <span class="whitespace-nowrap">
-			(<Image
-				src="/images/Clueless.png"
-				alt="Clueless"
-				class="inline"
-				width={20}
-				height={20}
-				fetchpriority="high"
-			/>)
+			(<Image src={clueless} alt="Clueless" class="inline" width={20} height={20} />)
 		</span>
 	</p>
 	<div class="flex flex-row flex-wrap justify-center gap-2.5 md:px-4">
