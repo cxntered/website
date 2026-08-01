@@ -1,13 +1,16 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
+import Twemoji from "../components/Twemoji.astro";
 import skillicons from "../images/skillicons.svg";
+
+const OSHI_MARKS = ["🐾", "👧", "🍵", "🗿", "⏳", "💜"];
 ---
 
 <Layout title="about">
 	<div class="text-ctp-text flex flex-col gap-2.5 leading-relaxed">
 		<p class="text-lg font-semibold">
-			hey there, i'm <span id="cxntered">cxntered</span>!! 👋
+			hey there, i'm <span id="cxntered">cxntered</span>!! <Twemoji emoji="👋" />
 		</p>
 		<p>i'm a self-taught full-stack developer who picked up programming for fun back in 2020.</p>
 		<p>
@@ -21,8 +24,8 @@ import skillicons from "../images/skillicons.svg";
 		</p>
 	</div>
 	<div class="flex flex-col gap-2">
-		<h2 class="text-ctp-red">## skills</h2>
 		<!-- taken from skillicons.dev -->
+		<h2 class="text-ctp-red">## skills</h2>
 		<Image
 			src={skillicons}
 			alt="javascript, typescript, nodejs, html, css, react, java, kotlin, python, go, astro"
@@ -33,6 +36,8 @@ import skillicons from "../images/skillicons.svg";
 	<div class="flex flex-col gap-2">
 		<!-- oshi marks :3 -->
 		<h2 class="text-ctp-red">## "emojis"</h2>
-		<p class="text-ctp-text text-2xl">🐾👧🍵🗿⏳💜</p>
+		<p class="text-ctp-text text-2xl">
+			{OSHI_MARKS.map((emoji) => <Twemoji emoji={emoji} />)}
+		</p>
 	</div>
 </Layout>

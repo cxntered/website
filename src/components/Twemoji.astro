@@ -1,0 +1,26 @@
+---
+import twemoji from "@twemoji/api";
+
+interface Props {
+	emoji: string;
+}
+
+const { emoji } = Astro.props;
+---
+
+<Fragment
+	set:html={twemoji.parse(emoji, {
+		folder: "svg",
+		ext: ".svg",
+	})}
+/>
+
+<style is:global>
+	.emoji {
+		display: inline-block;
+		height: 1.2em;
+		width: 1.2em;
+		vertical-align: -0.125em;
+		margin: 0 0.1em;
+	}
+</style>
