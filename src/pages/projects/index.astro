@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import { Icon } from "astro-icon/components";
 import Layout from "../../layouts/Layout.astro";
+import ProjectItem from "../../components/ProjectItem.astro";
 
 const projects = await getCollection("projects");
 const sortedProjects = projects.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
@@ -16,15 +16,12 @@ const sortedContributions = contributions.sort((a, b) => (a.data.order ?? 999) -
 		<h2 class="text-ctp-red">## projects</h2>
 		{
 			sortedProjects.map((project) => (
-				<a href={`/projects/${project.id}`} class="group flex flex-row items-center transition-colors">
-					<Icon name={project.data.icon} class="mr-2 h-6 w-6 shrink-0" />
-					<div class="flex flex-col md:flex-row md:gap-2.5">
-						<h2 class="text-ctp-text whitespace-nowrap">{project.data.name}</h2>
-						<p class="text-ctp-overlay2 group-hover:text-ctp-subtext0 transition-colors">
-							{project.data.description}
-						</p>
-					</div>
-				</a>
+				<ProjectItem
+					href={`/projects/${project.id}`}
+					icon={project.data.icon}
+					name={project.data.name}
+					description={project.data.description}
+				/>
 			))
 		}
 		<div class="flex flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-2.5">
@@ -46,15 +43,13 @@ const sortedContributions = contributions.sort((a, b) => (a.data.order ?? 999) -
 		<h2 class="text-ctp-red">## contributions</h2>
 		{
 			sortedContributions.map((project) => (
-				<a href={project.data.link} target="_blank" class="group flex flex-row items-center">
-					<Icon name={project.data.icon} class="mr-2 h-6 w-6 shrink-0" />
-					<div class="flex flex-col md:flex-row md:gap-2.5">
-						<h2 class="text-ctp-text whitespace-nowrap">{project.data.name}</h2>
-						<p class="text-ctp-overlay2 group-hover:text-ctp-subtext0 transition-colors">
-							{project.data.description}
-						</p>
-					</div>
-				</a>
+				<ProjectItem
+					href={project.data.link}
+					icon={project.data.icon}
+					name={project.data.name}
+					description={project.data.description}
+					target="_blank"
+				/>
 			))
 		}
 	</div>

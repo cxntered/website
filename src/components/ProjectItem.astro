@@ -1,0 +1,30 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	href: string;
+	icon: string;
+	name: string;
+	description: string;
+	target?: string;
+	rel?: string;
+}
+
+const { href, icon, name, description, target, rel } = Astro.props;
+---
+
+<a
+	href={href}
+	target={target}
+	rel={rel ?? (target === "_blank" ? "noopener noreferrer" : undefined)}
+	class="group relative flex flex-row items-center"
+>
+	<span class="bg-ctp-mauve absolute -left-3 h-4 w-0.5 opacity-0 transition-opacity group-hover:opacity-100"></span>
+	<Icon name={icon} class="mr-2 h-6 w-6 shrink-0 transition-transform group-hover:-translate-y-px" />
+	<div class="flex flex-col md:flex-row md:gap-2.5">
+		<h2 class="text-ctp-text whitespace-nowrap">{name}</h2>
+		<p class="text-ctp-overlay2 group-hover:text-ctp-subtext0 transition-colors">
+			{description}
+		</p>
+	</div>
+</a>
