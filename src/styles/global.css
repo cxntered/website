@@ -21,29 +21,6 @@ body {
 	}
 }
 
-@theme {
-	--color-icons-discord: #5865f2;
-	--color-icons-codeberg: #2185d0;
-	--color-icons-modrinth: #00af5c;
-	--color-icons-twitter: #1d9bf0;
-	--color-icons-bluesky: #1185fe;
-	--color-icons-youtube: red;
-	--color-icons-twitch: #9146ff;
-	--color-icons-tetrio: #df4eaa;
-	--color-icons-monkeytype: #e2b714;
-}
-
-@source inline("to-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/10");
-@source inline("{hover:,focus-visible:}to-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/25");
-@source inline("border-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}/50");
-@source inline("{hover:,focus-visible:}border-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}");
-@source inline("text-icons-{discord,codeberg,modrinth,twitter,bluesky,youtube,twitch,tetrio,monkeytype}");
-@source inline("to-{white,ctp-blue}/10");
-@source inline("{hover:,focus-visible:}to-{white,ctp-blue}/25");
-@source inline("border-{white,ctp-blue}/50");
-@source inline("{hover:,focus-visible:}border-{white,ctp-blue}");
-@source inline("text-{white,ctp-blue}");
-
 @utility prose-catppuccin {
 	--tw-prose-body: var(--color-ctp-text);
 	--tw-prose-headings: var(--color-ctp-text);
