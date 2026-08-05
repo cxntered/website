@@ -1,0 +1,68 @@
+---
+import { Icon } from "astro-icon/components";
+
+// rascal does not dream of a dear friend tracking
+const AIR_DATE = new Date("2026-10-16T00:00:00+09:00"); // Friday, 16 October 2026 at 12:00 AM JST
+---
+
+<footer transition:persist>
+	<p class="text-ctp-overlay0 text-center text-sm">
+		<!-- made with ❤ • <a
+			href="https://github.com/cxntered/website"
+			class="hover:text-ctp-overlay1 underline underline-offset-4 transition-colors"
+			target="_blank"
+		>
+			source code
+		</a> -->
+		<abbr title="rascal does not dream" class="underline-offset-2">peak fiction</abbr> ends in <abbr
+			id="countdown"
+			data-target={AIR_DATE.getTime()}
+			title="friday, 16 october 2026 at 12:00 AM JST"
+			class="tabular-nums underline-offset-2"
+		>
+			··d, ··h, ··m, ··s
+		</abbr>
+		{" "}
+		<a
+			href="https://anilist.co/anime/199340/Seishun-Buta-Yarou-wa-Dear-Friend-no-Yume-wo-Minai"
+			class="hover:text-ctp-overlay1 inline-block align-text-top leading-normal transition-colors"
+			target="_blank"
+		>
+			<Icon name="tabler:external-link" class="h-4 w-4" />
+		</a>
+	</p>
+</footer>
+
+<script>
+	const countdown = document.getElementById("countdown");
+	if (countdown) {
+		const targetMillis = parseInt(countdown.getAttribute("data-target") || "0", 10);
+		let intervalId: any;
+
+		const update = () => {
+			const difference = targetMillis - Date.now();
+
+			if (difference <= 0) {
+				countdown.textContent = "0d, 0h, 0m, 0s";
+				clearInterval(intervalId);
+				return;
+			}
+
+			const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+			const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+			const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+			countdown.textContent = `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
+		};
+
+		update();
+		setTimeout(
+			() => {
+				update();
+				intervalId = setInterval(update, 1000);
+			},
+			1000 - (Date.now() % 1000),
+		);
+	}
+</script>
