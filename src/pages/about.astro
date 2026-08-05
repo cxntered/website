@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Twemoji from "../components/Twemoji.astro";
 import skillicons from "../images/skillicons.svg";
 
 const OSHI_MARKS = ["🐾", "👧", "🍵", "🗿", "⏳", "💜"];
 ---
 
-<Layout title="about">
+<BaseLayout title="about">
 	<div class="text-ctp-text flex flex-col gap-2.5 leading-relaxed">
 		<p class="text-lg font-semibold">
 			hey there, i'm <span id="cxntered">cxntered</span>!! <Twemoji emoji="👋" />
@@ -40,4 +40,4 @@ const OSHI_MARKS = ["🐾", "👧", "🍵", "🗿", "⏳", "💜"];
 			{OSHI_MARKS.map((emoji) => <Twemoji emoji={emoji} />)}
 		</p>
 	</div>
-</Layout>
+</BaseLayout>

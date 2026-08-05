@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import LinkButton from "../components/LinkButton.astro";
 import clueless from "../images/Clueless.png";
 
@@ -63,7 +63,7 @@ const SOCIALS = [
 ];
 ---
 
-<Layout title="socials">
+<BaseLayout title="socials">
 	<p class="text-ctp-text text-center">
 		"<span id="cxntered">cxntered</span>" on almost every platform <span class="whitespace-nowrap">
 			(<Image src={clueless} alt="Clueless" class="inline" width={20} height={20} />)
@@ -72,4 +72,4 @@ const SOCIALS = [
 	<div class="flex flex-row flex-wrap justify-center gap-2.5 md:px-4">
 		{SOCIALS.map((social) => <LinkButton icon={social.icon} href={social.href} text={social.text} />)}
 	</div>
-</Layout>
+</BaseLayout>

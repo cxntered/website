@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import LinkButton from "../components/LinkButton.astro";
 
 const SOCIALS = [
@@ -21,11 +21,11 @@ const SOCIALS = [
 ];
 ---
 
-<Layout>
+<BaseLayout>
 	<p class="text-ctp-text text-center">
 		dumbass nerd who makes stupid things for my use & enjoyment <span class="whitespace-nowrap">(・∀・)ﾉﾞ</span>
 	</p>
 	<div class="flex flex-row flex-wrap justify-center gap-x-3 gap-y-2 sm:gap-x-4">
 		{SOCIALS.map(({ icon, href, text }) => <LinkButton icon={icon} href={href} text={text} isColored={false} />)}
 	</div>
-</Layout>
+</BaseLayout>
