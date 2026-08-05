@@ -1,6 +1,13 @@
 ---
 import { Icon } from "astro-icon/components";
 
+interface Props {
+	icon: string;
+	href: string;
+	text: string;
+	isColored?: boolean;
+}
+
 const { icon, href, text, isColored = true } = Astro.props;
 
 const COLORS: Record<string, string> = {
@@ -19,7 +26,7 @@ const COLORS: Record<string, string> = {
 };
 
 const iconName = icon.split(":").at(-1);
-const color = COLORS[iconName];
+const color = COLORS[iconName ?? ""] ?? "white";
 ---
 
 <a
