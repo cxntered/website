@@ -21,6 +21,14 @@ body {
 	}
 }
 
+h2.subheading {
+	color: var(--color-ctp-red);
+
+	&::before {
+		content: "## ";
+	}
+}
+
 @utility prose-catppuccin {
 	--tw-prose-body: var(--color-ctp-text);
 	--tw-prose-headings: var(--color-ctp-text);
