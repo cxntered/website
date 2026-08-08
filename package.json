@@ -11,6 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@astrojs/markdown-satteri": "^0.3.8",
     "@catppuccin/tailwindcss": "^1.0.0",
     "@fontsource-variable/jetbrains-mono": "^5.3.0",
     "@iconify-json/catppuccin": "^1.2.17",
@@ -22,6 +23,7 @@
     "@twemoji/api": "^17.0.3",
     "astro": "^7.1.1",
     "astro-icon": "^1.1.5",
+    "satteri": "^0.10.5",
     "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3"
   },
