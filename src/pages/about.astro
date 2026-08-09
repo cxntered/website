@@ -1,8 +1,23 @@
 ---
-import { Image } from "astro:assets";
+import SkillBadge from "../components/SkillBadge.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Twemoji from "../components/Twemoji.astro";
-import skillicons from "../images/skillicons.svg";
+
+const SKILLS = [
+	{ name: "javascript", icon: "catppuccin:javascript", color: "var(--color-ctp-yellow)" },
+	{ name: "typescript", icon: "catppuccin:typescript", color: "var(--color-ctp-blue)" },
+	{ name: "java", icon: "catppuccin:java", color: "var(--color-ctp-red)" },
+	{ name: "kotlin", icon: "catppuccin:kotlin", color: "var(--color-ctp-lavender)" },
+	{ name: "python", icon: "catppuccin:python", color: "var(--color-ctp-blue)" },
+	{ name: "go", icon: "catppuccin:go", color: "var(--color-ctp-sapphire)" },
+	{ name: "react", icon: "catppuccin:javascript-react", color: "var(--color-ctp-sky)" },
+	{ name: "astro", icon: "catppuccin:astro", color: "var(--color-ctp-pink)" },
+	{ name: "tailwind", icon: "catppuccin:tailwind", color: "var(--color-ctp-sapphire)" },
+	{ name: "html", icon: "catppuccin:html", color: "var(--color-ctp-peach)" },
+	{ name: "css", icon: "catppuccin:css", color: "var(--color-ctp-mauve)" },
+	{ name: "git", icon: "catppuccin:git", color: "var(--color-ctp-flamingo)" },
+	{ name: "figma", icon: "catppuccin:figma", color: "var(--color-ctp-lavender)" },
+];
 
 const OSHI_MARKS = ["🐾", "👧", "🍵", "🗿", "⏳", "💜"];
 ---
@@ -24,14 +39,10 @@ const OSHI_MARKS = ["🐾", "👧", "🍵", "🗿", "⏳", "💜"];
 		</p>
 	</div>
 	<div class="flex flex-col gap-2">
-		<!-- taken from skillicons.dev -->
 		<h2 class="subheading">skills</h2>
-		<Image
-			src={skillicons}
-			alt="javascript, typescript, nodejs, html, css, react, java, kotlin, python, go, astro"
-			class="self-start"
-			height="40"
-		/>
+		<div class="flex flex-row flex-wrap gap-2">
+			{SKILLS.map(({ name, icon, color }) => <SkillBadge icon={icon} text={name} color={color} />)}
+		</div>
 	</div>
 	<div class="flex flex-col gap-2">
 		<!-- oshi marks :3 -->

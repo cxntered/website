@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	icon: string;
+	text: string;
+	color: string;
+}
+
+const { icon, text, color } = Astro.props;
+---
+
+<div
+	class="skill-badge text-ctp-text flex flex-row items-center justify-center gap-2 rounded-md px-2 py-1.5 transition-colors"
+>
+	<Icon name={icon} size="20" class="badge-icon shrink-0" />
+	<span class="text-sm">{text}</span>
+</div>
+
+<style define:vars={{ color }}>
+	.skill-badge {
+		background: linear-gradient(to bottom, transparent, --alpha(var(--color) / 10%));
+		border: 1px solid --alpha(var(--color) / 50%);
+
+		&:hover,
+		&:focus-visible {
+			background: linear-gradient(to bottom, transparent, --alpha(var(--color) / 25%));
+			border-color: var(--color);
+			cursor: default;
+		}
+	}
+
+	.badge-icon {
+		color: var(--color);
+	}
+</style>
