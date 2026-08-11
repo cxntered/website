@@ -18,7 +18,14 @@ const projects = defineCollection({
 				}),
 			)
 			.optional(),
-		images: z.array(z.string()).optional(),
+		images: z
+			.array(
+				z.object({
+					src: z.string(),
+					alt: z.string(),
+				}),
+			)
+			.optional(),
 	}),
 });
 

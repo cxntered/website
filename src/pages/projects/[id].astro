@@ -2,6 +2,8 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Icon } from "astro-icon/components";
+import ImageGallery from "../../components/ImageGallery.astro";
+import Lightbox from "../../components/Lightbox.astro";
 import LinkButton from "../../components/LinkButton.astro";
 
 export const getStaticPaths = async () => {
@@ -33,6 +35,14 @@ const { Content } = await render(project);
 		</div>
 		<p class="text-ctp-subtext0 italic">{project.data.description}</p>
 	</div>
+	{
+		project.data.images && project.data.images.length > 0 && (
+			<Fragment>
+				<ImageGallery id={project.id} images={project.data.images} />
+				<Lightbox />
+			</Fragment>
+		)
+	}
 	<div class="prose prose-catppuccin">
 		<Content />
 	</div>

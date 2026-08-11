@@ -3,6 +3,13 @@ name: "RankSpoof"
 icon: "catppuccin:java"
 description: "A mod to spoof your Hypixel Rank"
 order: 5
+images:
+    - src: "showcase.png"
+      alt: "Showcase"
+    - src: "profile.png"
+      alt: "Profile"
+    - src: "config.png"
+      alt: "Config"
 links:
     - icon: "simple-icons:modrinth"
       href: "https://modrinth.com/mod/rankspoof"

@@ -3,6 +3,9 @@ name: "TextReplacer"
 icon: "catppuccin:kotlin"
 description: "A mod using OneConfig to visually replace any text"
 order: 6
+images:
+    - src: "showcase.png"
+      alt: "Showcase"
 links:
     - icon: "simple-icons:modrinth"
       href: "https://modrinth.com/mod/textreplacer"

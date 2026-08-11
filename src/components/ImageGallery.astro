@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+	id: string;
+	images: { src: string; alt: string }[];
+}
+
+const { id, images } = Astro.props;
+
+const allImages = import.meta.glob<ImageMetadata>("/src/images/projects/**/*.{png,jpg,jpeg,webp,gif,svg}", {
+	eager: true,
+	import: "default",
+});
+
+const projectImages = images.map(({ src, alt }) => {
+	const image = allImages[`/src/images/projects/${id}/${src}`];
+	if (!image) throw new Error(`Image not found: ${src}`);
+	return { image, alt };
+});
+---
+
+<div class="relative">
+	<div class="flex h-48 scrollbar-none gap-2 overflow-x-auto overflow-y-hidden" id="images-track">
+		{
+			projectImages.map(({ image, alt }) => (
+				<button
+					type="button"
+					class="bg-ctp-mantle h-48 shrink-0 cursor-pointer overflow-hidden rounded-sm focus-visible:-outline-offset-2"
+					data-lightbox-trigger
+					data-fullsrc={image.src}
+					data-alt={alt}
+					aria-label={`open image: ${alt}`}
+				>
+					<Image
+						src={image}
+						alt={alt}
+						width={image.format === "svg" ? undefined : 800}
+						class="h-full w-auto transition-opacity hover:opacity-80"
+					/>
+				</button>
+			))
+		}
+	</div>
+	<button
+		type="button"
+		class="bg-ctp-crust/80 hover:bg-ctp-crust pointer-events-none absolute top-1/2 left-2 flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full opacity-0 transition"
+		id="images-previous"
+		aria-label="previous image"
+	>
+		<Icon name="tabler:chevron-left" class="text-ctp-text h-5 w-5" />
+	</button>
+	<button
+		type="button"
+		class="bg-ctp-crust/80 hover:bg-ctp-crust pointer-events-none absolute top-1/2 right-2 flex h-9 w-9 -translate-y-1/2 cursor-pointer items-center justify-center rounded-full opacity-0 transition"
+		id="images-next"
+		aria-label="next image"
+	>
+		<Icon name="tabler:chevron-right" class="text-ctp-text h-5 w-5" />
+	</button>
+</div>
+
+<script>
+	document.addEventListener("astro:page-load", () => {
+		const track = document.getElementById("images-track");
+		const previous = document.getElementById("images-previous");
+		const next = document.getElementById("images-next");
+		if (!track || !previous || !next) return;
+
+		const images = [...track.querySelectorAll("button")];
+
+		const updateArrows = () => {
+			const maxScroll = track.scrollWidth - track.clientWidth;
+			const showPrevious = track.scrollLeft >= 1;
+			const showNext = track.scrollLeft < maxScroll - 1;
+			previous.classList.toggle("opacity-0", !showPrevious);
+			previous.classList.toggle("pointer-events-none", !showPrevious);
+			next.classList.toggle("opacity-0", !showNext);
+			next.classList.toggle("pointer-events-none", !showNext);
+		};
+
+		const scrollToImage = (image?: HTMLElement) => {
+			if (image) track.scrollTo({ left: image.offsetLeft - track.offsetLeft, behavior: "smooth" });
+		};
+
+		previous.addEventListener("click", () => {
+			scrollToImage(images.findLast((image) => image.offsetLeft < track.scrollLeft - 1));
+		});
+
+		next.addEventListener("click", () => {
+			scrollToImage(images.find((image) => image.offsetLeft > track.scrollLeft + 1));
+		});
+
+		track.addEventListener("scroll", updateArrows, { passive: true });
+		new ResizeObserver(updateArrows).observe(track);
+		updateArrows();
+	});
+</script>

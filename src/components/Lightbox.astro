@@ -1,0 +1,86 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<dialog
+	id="lightbox"
+	class="flex h-full max-h-full w-full max-w-full items-center justify-center bg-black/80 p-6"
+	aria-label="image viewer"
+>
+	<img alt="" class="max-h-full max-w-full" />
+	<button
+		type="button"
+		id="lightbox-close"
+		class="text-ctp-subtext0 hover:text-ctp-text absolute top-4 right-4 cursor-pointer transition-colors"
+		aria-label="close"
+	>
+		<Icon name="tabler:x" class="h-6 w-6" />
+	</button>
+</dialog>
+
+<script>
+	document.addEventListener("astro:page-load", () => {
+		const lightbox = document.querySelector<HTMLDialogElement>("#lightbox");
+		if (!lightbox) return;
+
+		document.querySelectorAll<HTMLElement>("[data-lightbox-trigger]").forEach((trigger) => {
+			trigger.addEventListener("click", () => {
+				const image = lightbox.querySelector("img");
+				if (!image) return;
+				image.src = trigger.dataset.fullsrc ?? "";
+				image.alt = trigger.dataset.alt ?? "";
+				lightbox.showModal();
+			});
+		});
+
+		lightbox.addEventListener("click", (event) => {
+			if (event.target === lightbox) lightbox.close();
+		});
+
+		lightbox.querySelector("#lightbox-close")?.addEventListener("click", () => lightbox.close());
+	});
+</script>
+
+<style>
+	#lightbox {
+		&:not([open]) {
+			display: none;
+		}
+
+		opacity: 0;
+		transition:
+			opacity 0.2s ease-out,
+			overlay 0.25s allow-discrete,
+			display 0.25s allow-discrete;
+
+		&[open] {
+			opacity: 1;
+
+			@starting-style {
+				opacity: 0;
+			}
+
+			img {
+				scale: 1;
+				opacity: 1;
+
+				@starting-style {
+					scale: 0.92;
+					opacity: 0;
+				}
+			}
+		}
+
+		img {
+			scale: 0.92;
+			opacity: 0;
+			transition:
+				opacity 0.2s ease-out,
+				scale 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+		}
+	}
+
+	:global(body:has(#lightbox[open])) {
+		overflow: hidden;
+	}
+</style>

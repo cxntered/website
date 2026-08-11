@@ -3,6 +3,9 @@ name: "YouTubeMusicControls"
 icon: "catppuccin:typescript"
 description: "Add YTM controls above the Discord user panel"
 order: 4
+images:
+    - src: "showcase.png"
+      alt: "Showcase"
 links:
     - icon: "simple-icons:github"
       href: "https://github.com/cxntered/youtubeMusicControls"
