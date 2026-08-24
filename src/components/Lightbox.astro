@@ -27,8 +27,16 @@ import { Icon } from "astro-icon/components";
 			trigger.addEventListener("click", () => {
 				const image = lightbox.querySelector("img");
 				if (!image) return;
-				image.src = trigger.dataset.fullsrc ?? "";
-				image.alt = trigger.dataset.alt ?? "";
+
+				const newSrc = new URL(trigger.dataset.fullsrc ?? "", window.location.origin).href;
+				const currentSrc = image.currentSrc || image.src;
+
+				if (currentSrc !== newSrc) {
+					image.removeAttribute("src"); // clear old image while new one loads
+					image.src = newSrc;
+					image.alt = trigger.dataset.alt ?? "";
+				}
+
 				lightbox.showModal();
 			});
 		});
