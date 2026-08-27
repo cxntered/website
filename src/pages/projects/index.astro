@@ -10,7 +10,7 @@ const contributions = await getCollection("contributions");
 const sortedContributions = contributions.sort((a, b) => (a.data.order ?? 999) - (b.data.order ?? 999));
 ---
 
-<BaseLayout title="projects">
+<BaseLayout title="projects" description="see a list of cxntered's projects (*￣▽￣)b">
 	<p class="text-ctp-subtext0 italic">click to see more info!</p>
 	<div class="flex flex-col items-start gap-2">
 		<h2 class="subheading">projects</h2>
