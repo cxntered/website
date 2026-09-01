@@ -11,8 +11,8 @@ designed in [Figma](https://figma.com), built with [Astro](https://astro.build),
 
 ### Requirements
 
-- [`Node.js`](https://nodejs.org/en): For running the website (`v18 or higher`)
-- [`pnpm`](https://pnpm.io): For installing dependencies (`corepack enable pnpm`)
+- [`Node.js`](https://nodejs.org/en): For building the website (`v22 or higher`)
+- [`pnpm`](https://pnpm.io): For installing dependencies
 
 ### Commands
 
