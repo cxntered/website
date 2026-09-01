@@ -23,6 +23,10 @@ const externalLinks = defineHastPlugin({
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://cxntered.dev',
+	build: {
+		format: 'file'
+	},
+	trailingSlash: 'never',
 	vite: {
 		plugins: [tailwindcss()]
 	},
