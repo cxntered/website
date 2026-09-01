@@ -12,8 +12,17 @@ const tabs = [
 	{ path: "/projects", label: "projects" },
 ];
 
+const normalizePath = (path: string) => path.replace(/(?:\/index)?\.html$|\/+$/, "") || "/";
+
 const isActive = (path: string) => {
-	return currentPath === path || (path !== "/" && currentPath.startsWith(path));
+	const normalizedCurrentPath = normalizePath(currentPath);
+	const normalizedPath = normalizePath(path);
+
+	if (normalizedPath === "/") {
+		return normalizedCurrentPath === "/";
+	}
+
+	return normalizedCurrentPath === normalizedPath || normalizedCurrentPath.startsWith(`${normalizedPath}/`);
 };
 ---
 
